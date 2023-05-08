@@ -275,7 +275,9 @@ const ConversationModal: React.FC<ConversationModal> = ({
         <ModalOverlay />
         <ModalContent bg="#2d2d2d" pb={4}>
           <ModalHeader color={"whiteAlpha.800"}>
-            Find or Create a Conversation
+            {editingConversation
+              ? "Update Conversation"
+              : "Find or Create a Conversation"}
           </ModalHeader>
           <ModalCloseButton mt={2} color={"whiteAlpha.800"} />
           <ModalBody>

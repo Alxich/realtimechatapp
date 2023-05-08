@@ -95,6 +95,8 @@ const main = async () => {
     credentials: true,
   };
 
+  console.log(process.env.CLIENT_ORIGIN);
+
   app.use(
     "/graphql",
     cors<cors.CorsRequest>(corsOptions),

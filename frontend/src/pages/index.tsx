@@ -17,7 +17,11 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     if (!session?.user && router.query.conversationId) {
-      router.replace(process.env.NEXT_PUBLIC_BASE_URL as string);
+      router.replace(
+        typeof process.env.NEXT_PUBLIC_BASE_URL === "string"
+          ? process.env.NEXT_PUBLIC_BASE_URL
+          : ""
+      );
     }
   }, [session?.user, router.query]);
 

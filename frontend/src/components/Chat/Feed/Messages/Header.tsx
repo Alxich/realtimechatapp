@@ -26,8 +26,8 @@ const MessagesHeader: React.FC<MessagesHeaderProps> = ({
   );
 
   if (data?.conversations && !loading && !conversation) {
-    console.log(process.env.NEXTAUTH_URL);
-    router.replace({ href: process.env.NEXTAUTH_URL as string });
+    console.log(process.env.NEXT_PUBLIC_BASE_URLBASE_URL);
+    router.replace({ href: process.env.NEXT_PUBLIC_BASE_URL as string });
   }
 
   return (
